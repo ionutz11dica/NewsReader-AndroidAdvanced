@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+<data>
+    <variable
+        name="viewModel"
+        type="com.ionutconstantinnicolae.newsreader.feature.newslist.model.ArticleItemViewModel" />
+</data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/black">
+
+        <ImageView
+            android:id="@+id/news_photo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:src="@drawable/abc_vector_test"
+            android:padding="12dp"
+            android:contentDescription="TODO"
+            app:newsReaderItemImageUrl="@{viewModel.urlPhoto}"/>
+
+        <TextView
+            android:id="@+id/news_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18dp"
+            android:text="@{viewModel.titleNews}"
+            android:paddingTop="10dp"
+            android:textColor="@color/white"
+            app:layout_constraintLeft_toRightOf="@+id/news_photo"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            />
+
+
+        <TextView
+            android:id="@+id/news_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18dp"
+            android:text="@{viewModel.contentNews}"
+            android:paddingTop="10dp"
+            android:layout_margin="5dp"
+            android:ellipsize="end"
+            android:lines="2"
+            android:textColor="@color/white"
+            app:layout_constraintLeft_toRightOf="@+id/news_photo"
+            app:layout_constraintTop_toBottomOf="@+id/news_title"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
