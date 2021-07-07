@@ -20,11 +20,4 @@ public class ArticleItemViewModel {
         contentNews = new ObservableField<>();
         descriptionNews = new ObservableField<>();
     }
-
-    public ArticleItemViewModel(Article article){
-        urlPhoto = new ObservableField<>(article.imageUrl);
-        titleNews = new ObservableField<>(article.title);
-        contentNews = new ObservableField<>(article.content);
-        descriptionNews = new ObservableField<>(article.description);
-    }
 }

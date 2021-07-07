@@ -1,13 +1,9 @@
 package com.ionutconstantinnicolae.data.remote;
 
 import android.util.Log;
-
 import com.google.gson.Gson;
-
 import org.jetbrains.annotations.NotNull;
-
 import java.util.concurrent.TimeUnit;
-
 import okhttp3.OkHttpClient;
 import okhttp3.logging.HttpLoggingInterceptor;
 import retrofit2.Retrofit;
@@ -42,7 +38,7 @@ public class HttpClientFactory {
                 .followRedirects(true)
                 .followSslRedirects(true)
                 .retryOnConnectionFailure(true)
-//                .addInterceptor(new HttpSuccessInterceptor())
+                .addInterceptor(new HttpSuccessInterceptor())
                 .addInterceptor(logInterceptor)
                 .connectTimeout(30, TimeUnit.SECONDS)
                 .writeTimeout(30, TimeUnit.SECONDS)

@@ -12,11 +12,8 @@ public class ArticleToArticleEntry implements Function<List<Article>, List<Artic
     public List<ArticleEntity> apply(@NotNull List<Article> articleEntityList) throws Exception {
         List<ArticleEntity> articleItemViewModels = new ArrayList<>();
         for( Article articleItem: articleEntityList){
-            ArticleEntity articleEntity = new ArticleEntity();
-            articleEntity.title = articleItem.title;
-            articleEntity.description = articleItem.description;
-            articleEntity.imageUrl = articleItem.imageUrl;
-            articleEntity.content = articleItem.content;
+            ArticleEntity articleEntity = new ArticleEntity(articleItem.imageUrl, articleItem.title,articleItem.content,articleItem.description);
+
             articleItemViewModels.add(articleEntity);
         }
 

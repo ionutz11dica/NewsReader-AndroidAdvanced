@@ -1,15 +1,9 @@
 package com.ionutconstantinnicolae.data.feature.news.model;
 
 import androidx.annotation.Nullable;
-import androidx.room.Entity;
-import androidx.room.PrimaryKey;
-
 import io.reactivex.annotations.NonNull;
 
-
-@Entity(tableName = "articles")
 public class Article {
-    @PrimaryKey(autoGenerate = true)
     @Nullable
     public Integer id;
 
@@ -20,6 +14,7 @@ public class Article {
     public String content;
 
     public String description;
+
     public Article(@NonNull String imageUrl, @NonNull String title, @NonNull String content, @NonNull String description) {
         this.imageUrl = imageUrl;
         this.title = title;

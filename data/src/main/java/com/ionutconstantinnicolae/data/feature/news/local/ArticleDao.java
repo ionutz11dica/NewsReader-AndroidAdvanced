@@ -17,9 +17,9 @@ import io.reactivex.Single;
 public interface ArticleDao {
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    Completable insertArticles(List<Article> articles);
+    Completable insertArticles(List<ArticleEntity> articles);
 
     @Query("SELECT * FROM articles")
-    Single<List<Article>> queryArticles();
+    Single<List<ArticleEntity>> queryArticles();
 
 }

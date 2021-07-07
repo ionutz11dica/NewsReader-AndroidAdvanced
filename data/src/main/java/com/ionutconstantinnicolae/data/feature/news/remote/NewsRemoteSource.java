@@ -1,7 +1,7 @@
 package com.ionutconstantinnicolae.data.feature.news.remote;
 
 import com.ionutconstantinnicolae.data.feature.news.model.Article;
-import com.ionutconstantinnicolae.data.feature.news.remote.mapper.NewsDtoToNewsMapper;
+import com.ionutconstantinnicolae.data.feature.news.remote.mapper.ArticleDtoToArticle;
 import com.ionutconstantinnicolae.data.remote.NewsApi;
 
 import java.util.List;
@@ -23,7 +23,7 @@ public class NewsRemoteSource {
 
     public Single<List<Article>> getNewsArticles() {
         return newsApi.getNewsArticles(API_KEY, EN_LANGUAGE_FILTER)
-                .map(new NewsDtoToNewsMapper())
+                .map(new ArticleDtoToArticle())
                 .subscribeOn(Schedulers.io());
     }
 

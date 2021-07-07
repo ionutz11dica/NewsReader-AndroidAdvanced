@@ -8,7 +8,7 @@ import java.util.ArrayList;
 import java.util.List;
 import io.reactivex.functions.Function;
 
-public class NewsDtoToNewsMapper implements Function<ArticleListDto, List<Article>> {
+public class ArticleDtoToArticle implements Function<ArticleListDto, List<Article>> {
     @Override
     public List<Article> apply(ArticleListDto articleListDto) {
         List<Article> articles = new ArrayList<>();

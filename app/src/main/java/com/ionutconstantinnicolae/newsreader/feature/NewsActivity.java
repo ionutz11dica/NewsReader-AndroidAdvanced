@@ -7,7 +7,7 @@ import android.os.Bundle;
 import com.ionutconstantinnicolae.newsreader.R;
 import com.ionutconstantinnicolae.newsreader.ui.main.NewsListFragment;
 
-public class MainActivity extends AppCompatActivity {
+public class NewsActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
