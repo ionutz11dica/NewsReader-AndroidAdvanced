@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">News Reader</string>
+    <string name="network_error">Something went wrong, are you connected? debug: %s</string>
+    <string name="test">Test</string>
 </resources>
